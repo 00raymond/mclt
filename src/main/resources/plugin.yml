@@ -1,0 +1,65 @@
+name: testmcgame
+version: '${project.version}'
+main: com.raymond.testmcgame.Testmcgame
+api-version: '1.20'
+
+commands:
+  balance:
+    description: get balance
+    usage: /<command>
+    aliases: [bal, money]
+    permission: testmcgame.balance
+  getweapon:
+    description: get weapon
+    usage: /<command>
+    permission: testmcgame.getweapon
+  joingame:
+    description: join a game
+    usage: /<command>
+    permission: testmcgame.joingame
+  spawndummy:
+    description: spawns test dummy
+    usage: /<command>
+    permission: testmcgame.spawndummy
+  leavegame:
+    description: leave a game
+    usage: /<command>
+    permission: testmcgame.leavegame
+  spawn:
+    description: move to spawn
+    usage: /<command>
+    permission: testmcgame.spawn
+  spawnother:
+    description: move someone else to spawn
+    usage: /<command>
+    permission: testmcgame.spawn.other
+  createregion:
+    description: create, get, remove regions
+    usage: /<command>
+    permission: testmcgame.createregion
+
+permissions:
+  testmcgame.balance:
+    description: allows balance command
+    default: true
+  testmcgame.getweapon:
+    description: allows get weapon
+    default: op
+  testmcgame.joingame:
+    description: allows join game
+    default: true
+  testmcgame.spawndummy:
+    description: allows spawn dummy
+    default: op
+  testmcgame.leavegame:
+    description: allows leave game
+    default: true
+  testmcgame.spawn:
+    description: move to spawn
+    default: true
+  testmcgame.spawn.other:
+    description: move someone else to spawn
+    default: op
+  testmcgame.createregion:
+    description: create get remove regions
+    default: op
